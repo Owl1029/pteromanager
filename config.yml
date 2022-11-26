@@ -1,0 +1,81 @@
+# Bot Configuration
+token: 'MTA0NDU4NTQ4ODI4NTE3NTg1OQ.GfIRl0.X1D-vVJKDmj-VWYUEv-ojKbud66QCy1K6PlNGY'
+hostname: "SpicyHost" 
+
+# Production mode: Everyone can add the bot to their servers and use the bot (Not recommended)
+# Local mode: Only your GUILD_ID can use the bot. (Recommended)
+ENV: "local"
+GUILD_ID: "1043936305127632927"
+bot_status:
+    enable: true
+    text: 'SpicyHost'
+    type: 'WATCHING' # can be 'WATCHING', 'PLAYING', 'LISTENING', or 'COMPETING'. for 'STREAMING' is not working for now
+
+# Discord Channel and Refresh Time Configuration for stats
+channel: '1045045421950640178'
+refresh: 60
+
+# Panel configuration
+panel:
+    url: 'https://panel.spicyhost.tk'
+    key: 'ptla_iAgw6aLZ5BCl4r5ItNsbFG86YS2xYa4nzIcT5Zxj2k9' # Petro API key
+    adminkey: 'ptlc_WRQQWB9yV88jaGpljl4DEzRgrMEnCeJQrAoyT1ninTR' # Admin's API Key
+
+# Stats message Configuration
+# set to false if you want to disable option
+message:
+    content: false
+    attachment: false # If you enable attachment on message it upload the attachment first before sending or editing message and it will delay the stats
+
+# Stats embed
+embed:
+    title: 'SpicyHost'
+    color: '5865F2'
+    description: 'Next update {{time}}' # You can use {{time}} to make "in X seconds" time format
+    footer: 'PteroStats By Hirzi#8701'
+    timestamp: true
+    thumbnail: false
+    image: false
+    field:
+        enable: false
+        title: 'Custom Field'
+        description: 'Custom Field' # You can use {{time}} to make "in X seconds" time format
+
+# Stats message Button Configuration
+button:
+    enable: true
+    btn1:
+        label: 'Status'
+        url: 'https://status.spicyhost.tk'
+    btn2:
+        label: 'Panel'
+        url: 'https://panel.spicyhost.tk'
+    btn3:
+        label: ''
+        url: ''
+    btn4:
+        label: ''
+        url: ''
+    btn5:
+        label: ''
+        url: ''
+
+# Status message Configuration
+status:
+    online: ':green_circle: Online'
+    offline: ':red_circle: Offline'
+
+# Stats nodes Resource
+nodes_resource:
+    blacklist: [] # You can add node id to remove the node from status embed (Example: "blacklist: [1]")
+    enable: false
+    servers: true
+    location: true
+    allocations: true
+    unit: 'gb' # You can use "gb", "mb", "tb", or "percent"
+
+# Stats panel Users and Servers
+panel_resource:
+    enable: true
+    servers: true
+    users: true
