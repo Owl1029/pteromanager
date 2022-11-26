@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js')
 const Nodeactyl = require('nodeactyl');
 
 module.exports = {
-    permissions: ["ADMINISTRATOR"],
+    permissions: [],
     data: new SlashCommandBuilder()
         .setName("checkstatus")
         .setDescription("Checks status of a server")
@@ -17,6 +17,8 @@ module.exports = {
         try {
             const serverID = interaction.options.getString("serverid");
             const panel = new Nodeactyl.NodeactylClient(client.config.panel.url, client.config.panel.adminkey);
+
+            await interaction.deferReply();
             const status = await panel.getServerStatus(serverID)
 
             const embed = new MessageEmbed()
@@ -25,11 +27,10 @@ module.exports = {
             .setURL(client.config.panel.url)
             .setDescription(`Status: ${status}`);
     
-            await interaction.reply({embeds: [embed] });
+            interaction.editReply({ embeds: [embed] });
         } catch {
-            interaction.reply({
-                content: "**Wrong information provided**\<:failed:1043958393540444212>",
-                ephemeral: true
+            interaction.editReply({
+                content: "**Wrong information provided**\<:failed:1043958393540444212>"
             })
         }
     }

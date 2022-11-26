@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js')
 const Nodeactyl = require('nodeactyl');
 
 module.exports = {
-    permissions: ["ADMINISTRATOR"],
+    permissions: [],
     data: new SlashCommandBuilder()
         .setName("getuserbyusername")
         .setDescription("Gets information about a user via username")
@@ -37,9 +37,8 @@ Last Name: ${info.attributes.last_name}
 Language: ${info.attributes.language}\`\`\``);
         interaction.editReply({ embeds: [embed] });
         } catch {
-            interaction.reply({
-                content: "**Wrong information provided**\<:failed:1043958393540444212>",
-                ephemeral: true
+            interaction.editReply({
+                content: "**Wrong information provided**\<:failed:1043958393540444212>"
             })
         }
     }

@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js')
 const Nodeactyl = require('nodeactyl');
 
 module.exports = {
-    permissions: ["ADMINISTRATOR"],
+    permissions: [],
     data: new SlashCommandBuilder()
         .setName("getserver")
         .setDescription("Replies with the information of the server")
@@ -17,6 +17,9 @@ module.exports = {
         try {
             const serverID = interaction.options.getString("serverid");
             const panel = new Nodeactyl.NodeactylClient(client.config.panel.url, client.config.panel.adminkey);
+
+            await interaction.deferReply();
+
             const info = await panel.getServerDetails(serverID)
             const usage = await panel.getServerUsages(serverID)
             
@@ -53,11 +56,10 @@ is transferring: ${info.is_transferring}
 Renewable: ${info.renewable}
 renewal: ${info.renewal}
 BG: ${info.bg}\`\`\``);
-            await interaction.reply({embeds: [embed] });
+            interaction.editReply({ embeds: [embed] });
         } catch {
-            interaction.reply({
-                content: "**Wrong information provided**\<:failed:1043958393540444212>",
-                ephemeral: true
+            interaction.editReply({
+                content: "**Wrong information provided**\<:failed:1043958393540444212>"
             })
         }
     }

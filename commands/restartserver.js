@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js')
 const Nodeactyl = require('nodeactyl');
 
 module.exports = {
-    permissions: ["ADMINISTRATOR"],
+    permissions: [],
     data: new SlashCommandBuilder()
         .setName("restartserver")
         .setDescription("Restarts the server")
@@ -17,6 +17,8 @@ module.exports = {
         try {
             const serverID = interaction.options.getString("serverid");
             const panel = new Nodeactyl.NodeactylClient(client.config.panel.url, client.config.panel.adminkey);
+
+            await interaction.deferReply();
             const status = await panel.getServerStatus(serverID)
 
             const embed = new MessageEmbed()
@@ -36,11 +38,10 @@ module.exports = {
                 await panel.restartServer(serverID);
                 embed.setDescription("**The server is in-middle of shutting down. Cannot guarantee a successful restart.**")
             }
-        interaction.reply({ embeds: [embed] });
+        interaction.editReply({ embeds: [embed] });
         } catch(err) {
-            interaction.reply({
-                content: "**Wrong information provided**\<:failed:1043958393540444212>",
-                ephemeral: true
+            interaction.editReply({
+                content: "**Wrong information provided**\<:failed:1043958393540444212>"
             })
         }
     }

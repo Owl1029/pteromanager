@@ -20,6 +20,9 @@ Make sure you have downloaded NodeJS v16 and NPM before continuing any further
 2. Extract the ZIP
 3. Type ```npm install```
 4. Type ```npm start``` to start the project
+5. Configure the ```config.yml```
+6. Create a role called "PanelAdmin" (Or anything you have set for role in config.yml) 
+7. Add the role to the users who can use the bot. 
 
 ## Configuration 
 Make sure to edit the ```config.yml``` file. I've added comments in the ```config.yml``` file to make it easier for you to use the bot.

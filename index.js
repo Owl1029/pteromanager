@@ -99,77 +99,39 @@ client.once('ready', () => {
     })();
 });
 
-// Permissions
-const validPermissions = [
-    "CREATE_INSTANT_INVITE",
-    "KICK_MEMBERS",
-    "BAN_MEMBERS",
-    "ADMINISTRATOR",
-    "MANAGE_CHANNELS",
-    "MANAGE_GUILD",
-    "ADD_REACTIONS",
-    "VIEW_AUDIT_LOG",
-    "PRIORITY_SPEAKER",
-    "STREAM",
-    "VIEW_CHANNEL",
-    "SEND_MESSAGES",
-    "SEND_TTS_MESSAGES",
-    "MANAGE_MESSAGES",
-    "EMBED_LINKS",
-    "ATTACH_FILES",
-    "READ_MESSAGE_HISTORY",
-    "MENTION_EVERYONE",
-    "USE_EXTERNAL_EMOJIS",
-    "VIEW_GUILD_INSIGHTS",
-    "CONNECT",
-    "SPEAK",
-    "MUTE_MEMBERS",
-    "DEAFEN_MEMBERS",
-    "MOVE_MEMBERS",
-    "USE_VAD",
-    "CHANGE_NICKNAME",
-    "MANAGE_NICKNAMES",
-    "MANAGE_ROLES",
-    "MANAGE_WEBHOOKS",
-    "MANAGE_EMOJIS",
-]
-
 client.on('interactionCreate', async interaciton => {
     if (!interaciton.isCommand()) return;
-
-    // Permission handler
-    const cmd = client.commands.get(interaciton.commandName);
-
-    if(cmd.permissions.length){
-        let invalidPerms = []
-        for(const perm of cmd.permissions){
-          if(!validPermissions.includes(perm)){
-            return console.log(`Invalid Permissions ${perm}`);
-          }
-          if(!interaciton.member.permissions.has(perm)){
-            invalidPerms.push(perm);
-          }
-        }
-        if (invalidPerms.length){
-          return interaciton.reply({
-            content: `**You don't have permission to execute this command.** <:failed:1043958393540444212>`,
-            ephemeral: true
-          });
-        }
-    }
 
     // Execute command
     const command = client.commands.get(interaciton.commandName);
 
     if (!command) return;
 
-    try {
-        await command.execute(interaciton, client);
-    } catch(err) {
-        if (err) console.error(err);
-
-        await interaciton.reply({
-            content: "**An error occurred while exeucting this command.** \<:failed:1043958393540444212>",
+    if (command.data.name === 'help' || command.data.name === 'ping' || command.data.name === 'github') {
+        try {
+            await command.execute(interaciton, client);
+        } catch(err) {
+            if (err) console.error(err);
+    
+            await interaciton.reply({
+                content: "**An error occurred while exeucting this command.** \<:failed:1043958393540444212>",
+                ephemeral: true
+            })
+        }
+    } else if (interaciton.member.roles.cache.some(role => role.name === 'PanelAdmin')) {
+        try {
+            await command.execute(interaciton, client);
+        } catch(err) {
+            if (err) console.error(err);
+    
+            await interaciton.reply({
+                content: "**An error occurred while exeucting this command.** \<:failed:1043958393540444212>",
+                ephemeral: true
+            })
+        }   
+    } else {
+        interaciton.reply({
+            content: "**You don't have permission to execute this command** <:failed:1043958393540444212>",
             ephemeral: true
         })
     }

@@ -1,11 +1,12 @@
 # Bot Configuration
-token: 'Your bot token'
+token: 'MTA0NDU4NTQ4ODI4NTE3NTg1OQ.GqpZzC.-V1S3VgfQiFeZ38z87C-plP43xZkGKXI9cFnmI'
 hostname: "Your host name" 
+role: "PanelAdmin"
 
 # Production mode: Everyone can add the bot to their servers and use the bot (Not recommended)
 # Local mode: Only your GUILD_ID can use the bot. (Recommended)
 ENV: "local"
-GUILD_ID: "Your guild ID"
+GUILD_ID: "1043936305127632927"
 bot_status:
     enable: true
     text: 'Your host name'
@@ -17,9 +18,9 @@ refresh: 60
 
 # Panel configuration
 panel:
-    url: 'Your panel ID'
+    url: 'https://panel.mineberg.net'
     key: 'Your Petro API Key' # Petro API key
-    adminkey: 'Your Admin user's API Key' # Admin's API Key
+    adminkey: 'Your Admin users API Key' # Admin's API Key
 
 # Stats message Configuration
 # set to false if you want to disable option

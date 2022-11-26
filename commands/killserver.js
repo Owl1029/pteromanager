@@ -3,7 +3,7 @@ const { MessageEmbed } = require('discord.js')
 const Nodeactyl = require('nodeactyl');
 
 module.exports = {
-    permissions: ["ADMINISTRATOR"],
+    permissions: [],
     data: new SlashCommandBuilder()
         .setName("killserver")
         .setDescription("Kills the server")
@@ -41,9 +41,8 @@ module.exports = {
             }
         interaction.editReply({ embeds: [embed] });
         } catch {
-            interaction.reply({
-                content: "**Wrong information provided**\<:failed:1043958393540444212>",
-                ephemeral: true
+            interaction.editReply({
+                content: "**Wrong information provided**\<:failed:1043958393540444212>"
             })
         }
     }
