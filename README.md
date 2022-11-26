@@ -6,7 +6,7 @@
 ![Discord](https://img.shields.io/discord/1043936305127632927?color=%23697EC6&label=discord)
 
 ## What is Ptero Manager?
-Ptero Manager is a discord bot that you can host on your own system that allows you to manage your pterodactyl panel via discord. Find you find some bugs create a github issue or join our support server. 
+Ptero Manager is a discord bot that you can host on your own system that allows you to manage your pterodactyl panel via discord. If you find some bugs create a github issue or join our support server. 
 
 Thanks to [Fusion Terror](https://www.youtube.com/@FusionTerror) for creating a amazing [tutorial on creating a command handler](https://www.youtube.com/watch?v=HNH4V6Dhw6s)
 
