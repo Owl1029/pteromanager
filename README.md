@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/YAED0EZ.png" alt="Ptero Manager" width="400"/>
+<img src="https://i.imgur.com/14cEduP.png" alt="Ptero Manager" />
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
