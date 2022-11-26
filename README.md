@@ -1,4 +1,5 @@
-# Ptero Manager
+<img src="https://i.imgur.com/YAED0EZ.png" alt="Ptero Manager" width="400"/>
+
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
