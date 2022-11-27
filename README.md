@@ -4,6 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Discord](https://img.shields.io/discord/1043936305127632927?color=%23697EC6&label=discord)
+![GitHub all releases](https://img.shields.io/github/downloads/Owl1029/pteromanager/total)
 
 ## What is Ptero Manager?
 Ptero Manager is a discord bot that you can host on your own system that allows you to manage your pterodactyl panel via discord. If you find some bugs create a github issue or join our support server. 
