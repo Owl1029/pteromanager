@@ -9,8 +9,6 @@
 ## What is Ptero Manager?
 Ptero Manager is a discord bot that you can host on your own system that allows you to manage your pterodactyl panel via discord. If you find some bugs create a github issue or join our support server. 
 
-Thanks to [Fusion Terror](https://www.youtube.com/@FusionTerror) for creating an amazing [tutorial on creating a command handler](https://www.youtube.com/watch?v=HNH4V6Dhw6s)
-
 ## Setting Up
 
 Setting up Ptero Manager is really easy!
@@ -31,3 +29,8 @@ Make sure to edit the ```config.yml``` file. I've added comments in the ```confi
 ## Links
 * [Discord](https://discord.gg/svqDa5TaxA)
 * [Github](https://github.com/Owl1029/pteromanager)
+
+## Credits
+Thanks to [HirziDevs](https://github.com/HirziDevs) for creating [PteroStats](https://github.com/HirziDevs/PteroStats). We use [Pterostats](https://github.com/HirziDevs/PteroStats) to post live status to discord channels
+
+Thanks to [Fusion Terror](https://www.youtube.com/@FusionTerror) for creating an amazing [tutorial on creating a command handler](https://www.youtube.com/watch?v=HNH4V6Dhw6s)
