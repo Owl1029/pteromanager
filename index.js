@@ -45,14 +45,12 @@ const commands = [];
 client.commands = new Discord.Collection();
 client.config = config
 
-// Requires everything in /commands folder and registeres them to client.commands
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
     commands.push(command.data.toJSON());
     client.commands.set(command.data.name, command);
 }
 
-// Ready event
 client.once('ready', () => {
     console.log(chalk.green("Commands & Features by Owl"))
     console.log(chalk.green("PteroStats by HirziDevs"))
@@ -102,7 +100,6 @@ client.once('ready', () => {
 client.on('interactionCreate', async interaciton => {
     if (!interaciton.isCommand()) return;
 
-    // Execute command
     const command = client.commands.get(interaciton.commandName);
 
     if (!command) return;
@@ -114,7 +111,7 @@ client.on('interactionCreate', async interaciton => {
             if (err) console.error(err);
     
             await interaciton.reply({
-                content: "**An error occurred while exeucting this command.** \<:failed:1043958393540444212>",
+                content: "**An error occurred while exeucting this command.** <:failed:1043958393540444212>",
                 ephemeral: true
             })
         }
@@ -125,7 +122,7 @@ client.on('interactionCreate', async interaciton => {
             if (err) console.error(err);
     
             await interaciton.reply({
-                content: "**An error occurred while exeucting this command.** \<:failed:1043958393540444212>",
+                content: "**An error occurred while exeucting this command.** <:failed:1043958393540444212>",
                 ephemeral: true
             })
         }   
