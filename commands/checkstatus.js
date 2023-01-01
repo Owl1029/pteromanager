@@ -28,7 +28,7 @@ module.exports = {
             .setDescription(`Status: ${status}`);
     
             interaction.editReply({ embeds: [embed] });
-        } catch {
+        } catch {  
             interaction.editReply({
                 content: "**Wrong information provided**\<:failed:1043958393540444212>"
             })

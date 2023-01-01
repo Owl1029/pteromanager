@@ -1,7 +1,7 @@
 # Bot Configuration
 token: 'Your bot token'
 hostname: "Your host name" 
-role: 'PanelAdmin'
+role: '2935481233563485' # Role ID
 
 # Production mode: Everyone can add the bot to their servers and use the bot (Not recommended)
 # Local mode: Only your GUILD_ID can use the bot. (Recommended)
@@ -14,7 +14,7 @@ bot_status:
 
 # Discord Channel and Refresh Time Configuration for stats
 channel: 'Your channel ID'
-refresh: 60
+refresh: 60 # In Milliseconds
 
 # Panel configuration
 panel:

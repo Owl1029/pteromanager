@@ -115,7 +115,7 @@ client.on('interactionCreate', async interaciton => {
                 ephemeral: true
             })
         }
-    } else if (interaciton.member.roles.cache.some(role => role.name === 'PanelAdmin')) {
+    } else if (interaciton.member.roles.cache.some(role => role.id === client.config.role)) {
         try {
             await command.execute(interaciton, client);
         } catch(err) {
