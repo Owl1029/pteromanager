@@ -3,7 +3,6 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://www.javascript.com/)
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Discord](https://img.shields.io/discord/1043936305127632927?color=%23697EC6&label=discord)](https://discord.gg/svqDa5TaxA)
 [![GitHub all releases](https://img.shields.io/github/downloads/Owl1029/pteromanager/total)](https://github.com/Owl1029/pteromanager/releases/)
 
 ## Notice: Project Discontinuation
@@ -19,7 +18,7 @@ Feel free to fork the project and continue its development if you find it valuab
 Thank you to everyone who has contributed, used, or shown interest in the project. I appreciate your support.
 
 ## What is Ptero Manager?
-Ptero Manager is a discord bot that you can host on your own system that allows you to manage your pterodactyl panel via discord. If you find some bugs create a github issue or join our [support server](https://discord.gg/svqDa5TaxA). 
+Ptero Manager is a discord bot that you can host on your own system that allows you to manage your pterodactyl panel via discord.
 
 ## Setting Up
 
@@ -39,7 +38,6 @@ Make sure you have downloaded NodeJS v16 and NPM before continuing any further
 Make sure to edit the ```config.yml``` file. I've added comments in the ```config.yml``` file to make it easier for you to use the bot.
 
 ## Links
-* [Discord](https://discord.gg/svqDa5TaxA)
 * [Github](https://github.com/Owl1029/pteromanager)
 
 ## Credits
